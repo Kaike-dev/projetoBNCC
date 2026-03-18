@@ -1,0 +1,537 @@
+/* --- Variáveis de Estilo --- */
+:root {
+    --branco: #ffffff;
+    --fundo: #f4f7f9;
+    --azul-header: #007bff;
+    --azul-primario: #0056b3;
+    --azul-escuro: #004494;
+    --roxo-acento: #6f42c1;
+    --texto-escuro: #333333;
+    --texto-claro: #ffffff;
+    --sombra: 0 4px 15px rgba(0,0,0,0.08);
+    --sombra-header: 0 2px 5px rgba(0,0,0,0.05);
+    --border-radius: 8px;
+    --transition-suave: 0.3s ease-in-out;
+}
+
+/* --- Reset e Configurações Globais --- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: var(--fundo);
+    color: var(--texto-escuro);
+    line-height: 1.6;
+    overflow-x: hidden; /* Previne scroll horizontal no sidebar */
+}
+
+a {
+    text-decoration: none;
+    transition: color var(--transition-suave);
+}
+
+/* --- Auxiliares de Cor --- */
+.text-purple {
+    color: var(--roxo-acento) !important;
+}
+
+/* --- Mídia de Atenção: Menu Lateral (Sidebar) --- */
+.sidebar {
+    position: fixed;
+    top: 0;
+    right: -320px; /* Escondido por padrão */
+    width: 300px;
+    height: 100%;
+    background-color: var(--branco);
+    color: var(--texto-escuro);
+    transition: right var(--transition-suave);
+    padding: 2rem;
+    z-index: 1000;
+    box-shadow: -5px 0 15px rgba(0,0,0,0.1);
+    display: flex;
+    flex-direction: column;
+}
+
+.sidebar.active {
+    right: 0;
+}
+
+.close-btn {
+    background: none;
+    border: none;
+    color: var(--azul-header);
+    font-size: 2.5rem;
+    cursor: pointer;
+    position: absolute;
+    top: 10px;
+    right: 20px;
+}
+
+.sidebar-header {
+    margin-bottom: 2rem;
+    text-align: center;
+}
+
+.sidebar-logo {
+    max-width: 150px;
+    height: auto;
+}
+
+.sidebar ul {
+    list-style: none;
+}
+
+.sidebar ul li {
+    margin: 1.2rem 0;
+}
+
+.sidebar ul li a {
+    color: var(--texto-escuro);
+    font-size: 1.1rem;
+    display: flex;
+    align-items: center;
+}
+
+.sidebar ul li a i {
+    margin-right: 10px;
+    color: var(--roxo-acento);
+}
+
+.sidebar ul li a:hover {
+    color: var(--azul-header);
+    font-weight: 600;
+}
+
+
+header {
+    background-color: var(--branco);
+    box-shadow: var(--sombra-header);
+    position: sticky;
+    top: 0;
+    z-index: 900;
+}
+
+.header-container {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0.8rem 5%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+.logo img {
+    width: 250px; 
+    height: auto; 
+    object-fit: contain;
+    padding: 5px 0;
+}
+
+.main-nav ul {
+    list-style: none;
+    display: flex;
+    gap: 1.5rem;
+}
+
+.main-nav ul li a {
+    color: #555;
+    font-weight: 600;
+    font-size: 0.9rem;
+    padding-bottom: 5px;
+    border-bottom: 2px solid transparent;
+}
+
+.main-nav ul li a:hover,
+.main-nav ul li.active a {
+    color: var(--azul-header);
+    border-bottom-color: var(--roxo-acento);
+}
+
+.user-controls {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+.user-profile {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.avatar {
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid var(--branco);
+    box-shadow: 0 0 5px rgba(0,0,0,0.1);
+}
+
+
+.avatar:not([src]) {
+    background-color: #ccc;
+}
+
+.user-info {
+    display: flex;
+    flex-direction: column;
+}
+
+.user-name {
+    font-size: 0.95rem;
+    font-weight: 700;
+    color: var(--azul-header);
+}
+
+.my-account {
+    font-size: 0.8rem;
+    color: #666;
+}
+
+.menu-btn {
+    background: none;
+    border: none;
+    font-size: 2.2rem;
+    color: var(--roxo-acento);
+    cursor: pointer;
+    font-weight: bold;
+    padding: 0 10px;
+}
+
+.header-border {
+    height: 4px;
+    background: linear-gradient(90deg, var(--azul-header) 0%, var(--roxo-acento) 100%);
+}
+
+/* --- Conteúdo Principal (Main) --- */
+main {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 2rem 5%;
+}
+
+.content-box {
+    background-color: var(--branco);
+    padding: 2rem;
+    border-radius: var(--border-radius);
+    margin-bottom: 2rem;
+    box-shadow: var(--sombra);
+}
+
+
+.attention-title {
+    font-size: 2.2rem;
+    color: var(--azul-primario);
+    margin-bottom: 1.5rem;
+    line-height: 1.2;
+}
+
+.hero p {
+    color: #555;
+    margin-bottom: 1rem;
+    max-width: 1000px;
+}
+
+
+.services-seal {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+    align-items: center;
+}
+
+.services-list ul {
+    list-style: none;
+}
+
+.services-list ul li {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: var(--azul-primario);
+    margin: 1.2rem 0;
+    display: flex;
+    align-items: center;
+}
+
+.services-list ul li i {
+    font-size: 1.4rem;
+    margin-right: 15px;
+}
+
+
+.quality-seal {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    padding: 1.5rem;
+    border: 2px dashed #e1e8f0;
+    border-radius: var(--border-radius);
+    background-color: #fafbfc;
+}
+
+.seal-img {
+    max-height: 120px;
+    width: auto;
+}
+
+/* Micro-interação de atenção no selo */
+.attention-element {
+    animation: pulse var(--transition-suave) infinite alternate;
+}
+
+@keyframes pulse {
+    from { transform: scale(1); }
+    to { transform: scale(1.05); }
+}
+
+.seal-text h3 {
+    font-size: 1.1rem;
+    color: #777;
+    margin-bottom: 0.8rem;
+    letter-spacing: 1px;
+}
+
+.seal-text blockquote {
+    font-size: 1.3rem;
+    color: var(--azul-escuro);
+    font-style: italic;
+    font-weight: 600;
+    line-height: 1.3;
+    margin-bottom: 0.5rem;
+}
+
+.seal-text cite {
+    font-size: 0.95rem;
+    color: #666;
+}
+
+/* --- Seção de Módulos --- */
+.modules h2 {
+    font-size: 1.8rem;
+    color: var(--azul-primario);
+    margin-bottom: 1.5rem;
+    text-align: center;
+}
+
+.modules-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1.5rem;
+}
+
+.module-card {
+    border: 1px solid #e1e8f0;
+    border-radius: var(--border-radius);
+    padding: 1.5rem;
+    text-align: center;
+    transition: transform var(--transition-suave), box-shadow var(--transition-suave);
+    position: relative;
+    background-color: var(--branco);
+}
+
+.module-card:hover:not(.locked) {
+    transform: translateY(-5px);
+    box-shadow: var(--sombra);
+}
+
+.card-icon {
+    font-size: 2.2rem;
+    color: var(--roxo-acento);
+    margin-bottom: 1rem;
+}
+
+.module-card h4 {
+    font-size: 0.85rem;
+    color: #777;
+    margin-bottom: 0.3rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.module-card h3 {
+    font-size: 1.3rem;
+    color: var(--azul-primario);
+    margin-bottom: 0.5rem;
+    line-height: 1.2;
+}
+
+.module-card p {
+    font-size: 0.95rem;
+    color: #666;
+    margin-bottom: 1.2rem;
+    height: 2.4rem; /* Garante alinhamento */
+}
+
+.progress-bar {
+    background-color: #e9ecef;
+    border-radius: 20px;
+    height: 8px;
+    position: relative;
+    margin-bottom: 1.2rem;
+}
+
+.progress {
+    background-color: var(--azul-header);
+    height: 100%;
+    border-radius: 20px;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.progress-label {
+    position: absolute;
+    top: -20px;
+    right: 0;
+    font-size: 0.8rem;
+    color: #777;
+}
+
+.btn {
+    display: inline-block;
+    padding: 0.7rem 1.5rem;
+    border-radius: 20px;
+    font-weight: 600;
+    font-size: 0.9rem;
+    transition: background-color var(--transition-suave);
+    cursor: pointer;
+    border: none;
+}
+
+.btn-primary {
+    background-color: var(--roxo-acento);
+    color: var(--texto-claro);
+}
+
+.btn-primary:hover {
+    background-color: #5a32a3;
+}
+
+.btn-secondary {
+    background-color: #e9ecef;
+    color: var(--texto-escuro);
+}
+
+.btn-secondary:hover {
+    background-color: #dae0e5;
+}
+
+/* Estado bloqueado */
+.module-card.locked {
+    opacity: 0.6;
+}
+
+.locked-bar {
+    background-color: #d6d9dc;
+}
+
+.locked-icon {
+    position: absolute;
+    bottom: 1.5rem;
+    right: 1.5rem;
+    font-size: 1.5rem;
+    color: #999;
+}
+
+/* --- Rodapé Profissional (Footer) --- */
+/* ========================================= */
+/* Rodapé Ajustado (Desbugado e Elegante)    */
+/* ========================================= */
+footer {
+    background-color: var(--azul-escuro);
+    color: var(--texto-claro);
+    width: 100%;
+}
+
+.footer-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 3rem 5% 1.5rem 5%; /* Mais espaço para respirar */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 2rem;
+}
+
+/* Aqui está o conserto da logo! Removi o filter e ajustei o tamanho */
+.footer-logo { 
+    max-width: 200px; 
+    margin-bottom: 1rem; 
+}
+
+/* Deixando o slogan mais sofisticado */
+.footer-slogan { 
+    font-size: 1rem; 
+    color: #e1e8f0; 
+    letter-spacing: 0.5px;
+}
+
+.footer-contact { 
+    text-align: right; 
+}
+
+.social-icons { 
+    margin-bottom: 1.2rem; 
+}
+
+/* Ícones sociais mais bonitos e com efeito ao passar o mouse */
+.social-icons a i { 
+    font-size: 1.5rem; 
+    color: var(--texto-claro); 
+    margin-left: 1.2rem; 
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.social-icons a:hover i {
+    color: var(--roxo-acento);
+    transform: scale(1.1); /* Dá uma leve crescidinha */
+}
+
+/* Estilo do E-mail clicável */
+.footer-email {
+    font-size: 1.05rem;
+    color: var(--texto-claro);
+    text-decoration: none;
+    letter-spacing: 0.5px;
+    transition: color 0.3s ease;
+}
+
+.footer-email i {
+    color: var(--roxo-acento);
+    margin-right: 8px;
+}
+
+.footer-email:hover {
+    color: var(--roxo-acento);
+}
+
+.footer-bottom { 
+    text-align: center; 
+    border-top: 1px solid rgba(255,255,255,0.1); 
+    padding: 1.5rem; 
+    font-size: 0.85rem; 
+    background-color: #003675; 
+    color: #ccc; 
+    letter-spacing: 0.5px;
+}
+
+/* Responsivo do Rodapé */
+@media (max-width: 768px) {
+    .footer-container { 
+        flex-direction: column; 
+        text-align: center; 
+    }
+    .footer-contact { 
+        text-align: center; 
+    }
+    .social-icons a i {
+        margin: 0 0.6rem;
+    }
+}
