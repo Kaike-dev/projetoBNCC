@@ -661,8 +661,10 @@ body.dark-mode {
     --azul-header: #66b2ff;
     --azul-primario: #80c1ff;
     --texto-escuro: #e1e8f0;
-    --sombra: 0 4px 15px rgba(0,0,0,0.5);
-    --sombra-header: 0 2px 5px rgba(0,0,0,0.4);
+    
+    /* TROCAMOS AS SOMBRAS POR 'none' AQUI: */
+    --sombra: none; 
+    --sombra-header: none;
 }
 
 /* Ajustes finos do Modo Noturno */
