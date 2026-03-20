@@ -22,9 +22,19 @@ if (closeBtn && sidebar) {
 }
 
 
+
+const headerElement = document.querySelector('header');
+
 window.addEventListener('scroll', () => {
-    const progressBars = document.querySelectorAll('.progress');
     
+    if (window.scrollY > 50) {
+        headerElement.classList.add('encolhido');
+    } else {
+        headerElement.classList.remove('encolhido');
+    }
+
+    
+    const progressBars = document.querySelectorAll('.progress');
     
     function isInViewport(el) {
         const rect = el.getBoundingClientRect();
@@ -36,10 +46,37 @@ window.addEventListener('scroll', () => {
         );
     }
 
-    
     progressBars.forEach(bar => {
         if (isInViewport(bar.closest('.progress-bar')) && !bar.dataset.loaded) {
             
         }
     });
+
 });
+// --- LÓGICA DO MODO NOTURNO ---
+const themeToggleBtn = document.getElementById('theme-toggle');
+
+if (themeToggleBtn) {
+    const themeIcon = themeToggleBtn.querySelector('i');
+
+    // Verifica se já estava no modo escuro
+    if (localStorage.getItem('theme') === 'dark') {
+        document.body.classList.add('dark-mode');
+        if (themeIcon) themeIcon.classList.replace('fa-moon', 'fa-sun');
+    }
+
+    // Ação de clique no botão
+    themeToggleBtn.addEventListener('click', () => {
+        document.body.classList.toggle('dark-mode');
+        
+        const isDark = document.body.classList.contains('dark-mode');
+        
+        if (isDark) {
+            if (themeIcon) themeIcon.classList.replace('fa-moon', 'fa-sun');
+            localStorage.setItem('theme', 'dark');
+        } else {
+            if (themeIcon) themeIcon.classList.replace('fa-sun', 'fa-moon');
+            localStorage.setItem('theme', 'light');
+        }
+    });
+}

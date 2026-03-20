@@ -1,4 +1,4 @@
-/* --- Variáveis de Estilo --- */
+
 :root {
     --branco: #ffffff;
     --fundo: #f4f7f9;
@@ -14,7 +14,7 @@
     --transition-suave: 0.3s ease-in-out;
 }
 
-/* --- Reset e Configurações Globais --- */
+
 * {
     margin: 0;
     padding: 0;
@@ -26,7 +26,7 @@ body {
     background-color: var(--fundo);
     color: var(--texto-escuro);
     line-height: 1.6;
-    overflow-x: hidden; /* Previne scroll horizontal no sidebar */
+    overflow-x: hidden; 
 }
 
 a {
@@ -34,16 +34,16 @@ a {
     transition: color var(--transition-suave);
 }
 
-/* --- Auxiliares de Cor --- */
+
 .text-purple {
     color: var(--roxo-acento) !important;
 }
 
-/* --- Mídia de Atenção: Menu Lateral (Sidebar) --- */
+
 .sidebar {
     position: fixed;
     top: 0;
-    right: -320px; /* Escondido por padrão */
+    right: -320px; 
     width: 300px;
     height: 100%;
     background-color: var(--branco);
@@ -107,12 +107,14 @@ a {
 }
 
 
+/* Atualize as regras existentes adicionando a transição */
 header {
     background-color: var(--branco);
     box-shadow: var(--sombra-header);
     position: sticky;
     top: 0;
     z-index: 900;
+    transition: all var(--transition-suave); /* NOVA LINHA */
 }
 
 .header-container {
@@ -122,14 +124,29 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    transition: padding var(--transition-suave); 
 }
-
 
 .logo img {
     width: 250px; 
     height: auto; 
     object-fit: contain;
     padding: 5px 0;
+    transition: width var(--transition-suave), padding var(--transition-suave); /* NOVA LINHA */
+}
+
+
+header.encolhido {
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1); 
+}
+
+header.encolhido .header-container {
+    padding: 0.3rem 5%; 
+}
+
+header.encolhido .logo img {
+    width: 180px; 
+    padding: 2px 0;
 }
 
 .main-nav ul {
@@ -209,7 +226,7 @@ header {
     background: linear-gradient(90deg, var(--azul-header) 0%, var(--roxo-acento) 100%);
 }
 
-/* --- Conteúdo Principal (Main) --- */
+
 main {
     max-width: 1400px;
     margin: 0 auto;
@@ -280,7 +297,7 @@ main {
     width: auto;
 }
 
-/* Micro-interação de atenção no selo */
+
 .attention-element {
     animation: pulse var(--transition-suave) infinite alternate;
 }
@@ -311,7 +328,7 @@ main {
     color: #666;
 }
 
-/* --- Seção de Módulos --- */
+
 .modules h2 {
     font-size: 1.8rem;
     color: var(--azul-primario);
@@ -365,7 +382,7 @@ main {
     font-size: 0.95rem;
     color: #666;
     margin-bottom: 1.2rem;
-    height: 2.4rem; /* Garante alinhamento */
+    height: 2.4rem; 
 }
 
 .progress-bar {
@@ -422,7 +439,7 @@ main {
     background-color: #dae0e5;
 }
 
-/* Estado bloqueado */
+
 .module-card.locked {
     opacity: 0.6;
 }
@@ -439,99 +456,240 @@ main {
     color: #999;
 }
 
-/* --- Rodapé Profissional (Footer) --- */
-/* ========================================= */
-/* Rodapé Ajustado (Desbugado e Elegante)    */
-/* ========================================= */
+
+/* ==================================================
+   NOVO RODAPÉ (ESTILO COLUNAS)
+================================================== */
 footer {
     background-color: var(--azul-escuro);
     color: var(--texto-claro);
     width: 100%;
+    margin-top: 3rem;
+    padding: 2rem 5% 0 5%; 
 }
 
-.footer-container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 3rem 5% 1.5rem 5%; /* Mais espaço para respirar */
+.footer-top {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    flex-wrap: wrap;
-    gap: 2rem;
+    padding-bottom: 1.5rem;
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
-/* Aqui está o conserto da logo! Removi o filter e ajustei o tamanho */
-.footer-logo { 
-    max-width: 200px; 
-    margin-bottom: 1rem; 
+.footer-logo-minimal {
+    height: 70px; /* Um pouquinho maior pra dar destaque */
+    width: auto;
+    
+    /* APAGAMOS O FILTRO E ADICIONAMOS O FUNDO: */
+    background-color: #ffffff; /* Fundo branco pra destacar a logo */
+    padding: 10px 15px; /* Espaço em volta do ícone */
+    border-radius: 16px; /* Cantos arredondados estilo aplicativo */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); /* Sombreado chique */
+    object-fit: contain;
+    transition: transform 0.3s ease; /* Animação suave */
 }
 
-/* Deixando o slogan mais sofisticado */
-.footer-slogan { 
-    font-size: 1rem; 
-    color: #e1e8f0; 
-    letter-spacing: 0.5px;
+/* Um efeitinho pro ícone pular levemente se passar o mouse */
+.footer-logo-minimal:hover {
+    transform: translateY(-3px);
 }
 
-.footer-contact { 
-    text-align: right; 
-}
-
-.social-icons { 
-    margin-bottom: 1.2rem; 
-}
-
-/* Ícones sociais mais bonitos e com efeito ao passar o mouse */
-.social-icons a i { 
-    font-size: 1.5rem; 
-    color: var(--texto-claro); 
-    margin-left: 1.2rem; 
-    transition: color 0.3s ease, transform 0.3s ease;
-}
-
-.social-icons a:hover i {
-    color: var(--roxo-acento);
-    transform: scale(1.1); /* Dá uma leve crescidinha */
-}
-
-/* Estilo do E-mail clicável */
-.footer-email {
-    font-size: 1.05rem;
+/* Botão de voltar ao topo estilo pílula */
+.back-to-top {
     color: var(--texto-claro);
     text-decoration: none;
-    letter-spacing: 0.5px;
+    font-size: 0.9rem;
+    border: 1px solid var(--texto-claro);
+    padding: 8px 18px;
+    border-radius: 25px;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.back-to-top:hover {
+    background-color: var(--texto-claro);
+    color: var(--azul-escuro);
+}
+
+/* A linha fina divisória */
+.footer-divider {
+    max-width: 1200px;
+    margin: 0 auto;
+    height: 1px;
+    background-color: rgba(255, 255, 255, 0.2); 
+}
+
+.footer-main {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    padding: 3rem 0;
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.footer-mascot {
+    flex: 1;
+    min-width: 150px;
+    max-width: 250px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.mascot-img {
+    width: 100%;
+    max-height: 180px; 
+    object-fit: contain;
+}
+
+.footer-col {
+    flex: 1;
+    min-width: 200px;
+}
+
+.footer-col h4 {
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 1.5rem;
+    color: #aebfd4; /* Um azul bem clarinho para o título */
+}
+
+.footer-col ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-col ul li {
+    margin-bottom: 1rem;
+}
+
+.footer-col ul li a {
+    color: var(--texto-claro);
+    text-decoration: none;
+    font-size: 0.95rem;
     transition: color 0.3s ease;
+    display: flex;
+    align-items: center;
+    gap: 10px;
 }
 
-.footer-email i {
-    color: var(--roxo-acento);
-    margin-right: 8px;
-}
-
-.footer-email:hover {
+.footer-col ul li a:hover {
     color: var(--roxo-acento);
 }
 
-.footer-bottom { 
-    text-align: center; 
-    border-top: 1px solid rgba(255,255,255,0.1); 
-    padding: 1.5rem; 
-    font-size: 0.85rem; 
-    background-color: #003675; 
-    color: #ccc; 
-    letter-spacing: 0.5px;
+/* Redes Sociais com borda redonda */
+.social-col .social-icons {
+    display: flex;
+    gap: 1rem;
 }
 
-/* Responsivo do Rodapé */
+.social-col .social-icons a {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 45px;
+    height: 45px;
+    border: 1px solid var(--texto-claro);
+    border-radius: 50%;
+    color: var(--texto-claro);
+    font-size: 1.2rem;
+    transition: all 0.3s ease;
+}
+
+.social-col .social-icons a:hover {
+    background-color: var(--texto-claro);
+    color: var(--azul-escuro);
+    transform: scale(1.1);
+}
+
+.footer-bottom {
+    text-align: right; 
+    padding: 1.5rem 0;
+    font-size: 0.85rem;
+    color: #aebfd4;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Responsivo do novo rodapé */
 @media (max-width: 768px) {
-    .footer-container { 
-        flex-direction: column; 
-        text-align: center; 
+    .footer-main {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
     }
-    .footer-contact { 
-        text-align: center; 
+    .footer-col ul li a {
+        justify-content: center;
     }
-    .social-icons a i {
-        margin: 0 0.6rem;
+    .social-col .social-icons {
+        justify-content: center;
+    }
+    .footer-bottom {
+        text-align: center;
+    }
+    .footer-mascot {
+        margin-bottom: 1.5rem;
     }
 }
+
+.theme-btn {
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    color: var(--azul-header);
+    cursor: pointer;
+    transition: color var(--transition-suave), transform var(--transition-suave);
+    padding: 0 10px;
+}
+
+.theme-btn:hover {
+    color: var(--roxo-acento);
+    transform: scale(1.1);
+}
+
+/* Variáveis para quando o modo noturno estiver ativo no body */
+body.dark-mode {
+    --branco: #1a1e23;
+    --fundo: #0f1215;
+    --azul-header: #66b2ff;
+    --azul-primario: #80c1ff;
+    --texto-escuro: #e1e8f0;
+    --sombra: 0 4px 15px rgba(0,0,0,0.5);
+    --sombra-header: 0 2px 5px rgba(0,0,0,0.4);
+}
+
+/* Ajustes finos do Modo Noturno */
+body.dark-mode .quality-seal {
+    background-color: #242930;
+    border-color: #3a424d;
+}
+
+body.dark-mode .module-card {
+    background-color: var(--branco);
+    border-color: #2d333b;
+}
+
+body.dark-mode .progress-bar {
+    background-color: #2d333b;
+}
+
+body.dark-mode .btn-secondary {
+    background-color: #2d333b;
+    color: #e1e8f0;
+}
+
+/* DICA: Se a sua logo tiver letras pretas que somem no fundo escuro,
+   você pode adicionar este filtro para deixá-la branca no modo noturno: */
+/*
+body.dark-mode .logo img, 
+body.dark-mode .sidebar-logo {
+    filter: brightness(0) invert(1);
+}
+*/
