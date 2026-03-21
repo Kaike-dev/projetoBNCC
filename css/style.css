@@ -687,6 +687,43 @@ body.dark-mode .btn-secondary {
     color: #e1e8f0;
 }
 
+
+@media (max-width: 768px) {
+    
+    .main-nav, 
+    .auth-buttons {
+        display: none; 
+    }
+    
+    .logo img {
+        width: 160px; 
+    }
+    
+    .attention-title {
+        font-size: 1.6rem;
+    }
+    
+    .services-seal {
+        grid-template-columns: 1fr; 
+        gap: 1.5rem;
+    }
+    
+    .quality-seal {
+        flex-direction: column;
+        text-align: center;
+        padding: 1rem;
+    }
+    
+    .quality-seal .seal-img {
+        margin-bottom: 1rem;
+        max-height: 90px;
+    }
+    
+    .content-box {
+        padding: 1.5rem; 
+    }
+}
+
 /* DICA: Se a sua logo tiver letras pretas que somem no fundo escuro,
    você pode adicionar este filtro para deixá-la branca no modo noturno: */
 /*
