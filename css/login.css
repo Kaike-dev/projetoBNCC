@@ -329,3 +329,45 @@ body.dark-mode .banner-content p {
         margin-top: 1rem;
     }
 }
+.logo {
+    min-width: 250px;
+    display: flex;
+    align-items: center;
+}
+
+.logo img.logo-light,
+.logo img.logo-dark {
+    width: 250px;
+    height: auto;
+    object-fit: contain;
+}
+
+
+.logo-dark {
+    display: none;
+}
+
+body.dark-mode .logo-light {
+    display: none;
+}
+
+body.dark-mode .logo-dark {
+    display: inline-block;
+    mix-blend-mode: screen; 
+}
+
+.logo-light, 
+.logo-dark {
+    height: 100px !important; 
+    width: auto !important; 
+    object-fit: contain;
+    vertical-align: middle; 
+    margin: 0;
+    padding: 0;
+}
+
+.logo {
+    min-height: 100px; 
+    display: flex;
+    align-items: center;
+}

@@ -106,21 +106,19 @@ a {
     font-weight: 600;
 }
 
-
-/* Atualize as regras existentes adicionando a transição */
 header {
     background-color: var(--branco);
     box-shadow: var(--sombra-header);
     position: sticky;
     top: 0;
     z-index: 900;
-    transition: all var(--transition-suave); /* NOVA LINHA */
+    transition: all var(--transition-suave); 
 }
 
 .header-container {
     max-width: 1400px;
     margin: 0 auto;
-    padding: 0.8rem 5%;
+    padding: 1.5rem 5%; 
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -132,7 +130,7 @@ header {
     height: auto; 
     object-fit: contain;
     padding: 5px 0;
-    transition: width var(--transition-suave), padding var(--transition-suave); /* NOVA LINHA */
+    transition: width var(--transition-suave), padding var(--transition-suave); 
 }
 
 
@@ -456,10 +454,6 @@ main {
     color: #999;
 }
 
-
-/* ==================================================
-   NOVO RODAPÉ (ESTILO COLUNAS)
-================================================== */
 footer {
     background-color: var(--azul-escuro);
     color: var(--texto-claro);
@@ -478,24 +472,21 @@ footer {
 }
 
 .footer-logo-minimal {
-    height: 70px; /* Um pouquinho maior pra dar destaque */
+    height: 70px; 
     width: auto;
     
-    /* APAGAMOS O FILTRO E ADICIONAMOS O FUNDO: */
     background-color: #ffffff; /* Fundo branco pra destacar a logo */
     padding: 10px 15px; /* Espaço em volta do ícone */
     border-radius: 16px; /* Cantos arredondados estilo aplicativo */
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); /* Sombreado chique */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); 
     object-fit: contain;
-    transition: transform 0.3s ease; /* Animação suave */
+    transition: transform 0.3s ease; 
 }
 
-/* Um efeitinho pro ícone pular levemente se passar o mouse */
 .footer-logo-minimal:hover {
     transform: translateY(-3px);
 }
 
-/* Botão de voltar ao topo estilo pílula */
 .back-to-top {
     color: var(--texto-claro);
     text-decoration: none;
@@ -514,7 +505,7 @@ footer {
     color: var(--azul-escuro);
 }
 
-/* A linha fina divisória */
+
 .footer-divider {
     max-width: 1200px;
     margin: 0 auto;
@@ -558,7 +549,7 @@ footer {
     text-transform: uppercase;
     letter-spacing: 1px;
     margin-bottom: 1.5rem;
-    color: #aebfd4; /* Um azul bem clarinho para o título */
+    color: #aebfd4; 
 }
 
 .footer-col ul {
@@ -584,7 +575,6 @@ footer {
     color: var(--roxo-acento);
 }
 
-/* Redes Sociais com borda redonda */
 .social-col .social-icons {
     display: flex;
     gap: 1rem;
@@ -618,7 +608,6 @@ footer {
     margin: 0 auto;
 }
 
-/* Responsivo do novo rodapé */
 @media (max-width: 768px) {
     .footer-main {
         flex-direction: column;
@@ -654,7 +643,6 @@ footer {
     transform: scale(1.1);
 }
 
-/* Variáveis para quando o modo noturno estiver ativo no body */
 body.dark-mode {
     --branco: #1a1e23;
     --fundo: #0f1215;
@@ -662,12 +650,11 @@ body.dark-mode {
     --azul-primario: #80c1ff;
     --texto-escuro: #e1e8f0;
     
-    /* TROCAMOS AS SOMBRAS POR 'none' AQUI: */
     --sombra: none; 
     --sombra-header: none;
 }
 
-/* Ajustes finos do Modo Noturno */
+
 body.dark-mode .quality-seal {
     background-color: #242930;
     border-color: #3a424d;
@@ -724,11 +711,44 @@ body.dark-mode .btn-secondary {
     }
 }
 
-/* DICA: Se a sua logo tiver letras pretas que somem no fundo escuro,
-   você pode adicionar este filtro para deixá-la branca no modo noturno: */
-/*
-body.dark-mode .logo img, 
-body.dark-mode .sidebar-logo {
-    filter: brightness(0) invert(1);
+.logo {
+    min-width: 250px;
+    display: flex;
+    align-items: center;
 }
-*/
+
+.logo img.logo-light,
+.logo img.logo-dark {
+    width: 250px;
+    height: auto;
+    object-fit: contain;
+}
+
+.logo-dark {
+    display: none;
+}
+
+body.dark-mode .logo-light {
+    display: none;
+}
+
+body.dark-mode .logo-dark {
+    display: inline-block;
+    mix-blend-mode: screen; 
+}
+
+.logo-light, 
+.logo-dark {
+    height: 100px !important; 
+    width: auto !important; 
+    object-fit: contain;
+    vertical-align: middle; 
+    margin: 0;
+    padding: 0;
+}
+
+.logo {
+    min-height: 100px; 
+    display: flex;
+    align-items: center;
+}
