@@ -752,3 +752,218 @@ body.dark-mode .logo-dark {
     display: flex;
     align-items: center;
 }
+
+.section-title {
+    font-size: 2rem;
+    color: var(--azul-escuro);
+    margin-bottom: 1.5rem;
+    line-height: 1.2;
+}
+
+body.dark-mode .section-title { color: var(--texto-claro); }
+
+.hero-modern {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 3rem;
+    padding: 4rem 3rem !important;
+    background: linear-gradient(135deg, var(--branco) 0%, #f0f4ff 100%);
+    border: none;
+}
+
+body.dark-mode .hero-modern { background: linear-gradient(135deg, var(--branco) 0%, #171b22 100%); }
+
+.badge-tech {
+    display: inline-block;
+    background-color: rgba(111, 66, 193, 0.1);
+    color: var(--roxo-acento);
+    padding: 6px 15px;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+.hero-title {
+    font-size: 3rem;
+    color: var(--azul-escuro);
+    line-height: 1.1;
+    margin-bottom: 1.5rem;
+}
+
+body.dark-mode .hero-title { color: var(--texto-claro); }
+
+.hero-text p {
+    font-size: 1.1rem;
+    color: #555;
+    margin-bottom: 2rem;
+    max-width: 550px;
+}
+
+body.dark-mode .hero-text p { color: #aaa; }
+
+.hero-buttons {
+    display: flex;
+    gap: 1rem;
+}
+
+.btn-secondary-outline {
+    background: transparent;
+    border: 2px solid var(--azul-header);
+    color: var(--azul-header);
+    padding: 0.7rem 1.5rem;
+    border-radius: 20px;
+    font-weight: 600;
+    transition: all var(--transition-suave);
+}
+
+.btn-secondary-outline:hover {
+    background: var(--azul-header);
+    color: white;
+}
+
+.hero-image {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+}
+
+.mascot-float {
+    max-width: 350px;
+    width: 100%;
+    filter: drop-shadow(0 20px 30px rgba(0,0,0,0.15));
+    animation: float 4s ease-in-out infinite;
+}
+
+@keyframes float {
+    0% { transform: translateY(0px); }
+    50% { transform: translateY(-15px); }
+    100% { transform: translateY(0px); }
+}
+
+.about-grid {
+    display: grid;
+    grid-template-columns: 1.5fr 1fr;
+    gap: 3rem;
+    align-items: center;
+}
+
+.features-list {
+    list-style: none;
+    margin-top: 1.5rem;
+}
+
+.features-list li {
+    font-size: 1.05rem;
+    margin-bottom: 1rem;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: #444;
+}
+
+body.dark-mode .features-list li { color: #ccc; }
+
+.about-stats {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.stat-card {
+    background-color: var(--fundo);
+    padding: 1.5rem;
+    border-radius: var(--border-radius);
+    border-left: 4px solid var(--roxo-acento);
+    box-shadow: 0 4px 10px rgba(0,0,0,0.03);
+}
+
+body.dark-mode .stat-card { background-color: #242930; }
+
+.stat-card i {
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+}
+
+.stat-card h3 {
+    color: var(--azul-primario);
+    font-size: 1.2rem;
+}
+
+body.dark-mode .stat-card h3 { color: var(--texto-claro); }
+
+.bncc-header {
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.bncc-header .subtitle {
+    font-size: 1.1rem;
+    color: #666;
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+body.dark-mode .bncc-header .subtitle { color: #aaa; }
+
+.bncc-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+}
+
+.bncc-card {
+    background: var(--fundo);
+    padding: 2rem;
+    border-radius: 16px;
+    text-align: center;
+    transition: transform var(--transition-suave);
+}
+
+body.dark-mode .bncc-card { background: #242930; }
+
+.bncc-card:hover {
+    transform: translateY(-10px);
+}
+
+.icon-wrapper {
+    width: 70px;
+    height: 70px;
+    background: rgba(111, 66, 193, 0.1);
+    color: var(--roxo-acento);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2rem;
+    margin: 0 auto 1.5rem auto;
+}
+
+.bncc-card h3 {
+    color: var(--azul-escuro);
+    margin-bottom: 1rem;
+    font-size: 1.3rem;
+}
+
+body.dark-mode .bncc-card h3 { color: var(--texto-claro); }
+
+.bncc-card p {
+    color: #555;
+    font-size: 0.95rem;
+}
+
+body.dark-mode .bncc-card p { color: #aaa; }
+
+@media (max-width: 900px) {
+    .hero-modern {
+        flex-direction: column;
+        text-align: center;
+        padding: 3rem 1.5rem !important;
+    }
+    .hero-text p { margin: 1.5rem auto; }
+    .hero-buttons { justify-content: center; flex-wrap: wrap; }
+    .about-grid { grid-template-columns: 1fr; }
+}
