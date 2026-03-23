@@ -1,201 +1,337 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="pt-BR">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Prospec Edu | Consultoria e Formação BNCC</title>
-    <link rel="icon" type="image/png" href="img/favicon.png">
-    <link href="https://fonts.googleapis.com/css2?family=Segoe+UI:wght@400;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    <link rel="stylesheet" href="css/style.css">
-</head>
-<body>
-
+    <link rel="icon" type="image/png" href="img/favicon.png" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Segoe+UI:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+    <!-- link dos ícones - alteração feita em x -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+    />
+  </head>
+  <body>
     <aside id="sidebar" class="sidebar">
-        <button id="close-btn" class="close-btn" aria-label="Fechar menu">&times;</button>
-        <div class="logo">
-                <a href="#inicio">
-                    <img src="img/logo-clara.png" alt="Prospec Edu" class="logo-light">
-                    <img src="img/logo-prospecto-branca.png" alt="Prospec Edu" class="logo-dark">
-                </a>
-            </div>
-        <ul>
-            <li><a href="#inicio"><i class="fas fa-home"></i> Início</a></li>
-            <li><a href="#consultoria"><i class="fas fa-chalkboard-teacher"></i> Consultoria BNCC</a></li>
-            <li><a href="#modulos"><i class="fas fa-book-reader"></i> Módulos de Formação</a></li>
-            <li><a href="login.html"><i class="fas fa-sign-in-alt"></i> Entrar / Login</a></li>
-        </ul>
+      <button id="close-btn" class="close-btn" aria-label="Fechar menu">
+        &times;
+      </button>
+      <div class="logo">
+        <a href="#inicio">
+          <img src="img/logo-clara.png" alt="Prospec Edu" class="logo-light" />
+          <img
+            src="img/logo-prospecto-branca.png"
+            alt="Prospec Edu"
+            class="logo-dark"
+          />
+        </a>
+      </div>
+      <ul>
+        <li>
+          <a href="#inicio"><i class="fas fa-home"></i> Início</a>
+        </li>
+        <li>
+          <a href="#consultoria"
+            ><i class="fas fa-chalkboard-teacher"></i> Consultoria BNCC</a
+          >
+        </li>
+        <li>
+          <a href="#modulos"
+            ><i class="fas fa-book-reader"></i> Módulos de Formação</a
+          >
+        </li>
+        <li>
+          <a href="login.html"
+            ><i class="fas fa-sign-in-alt"></i> Entrar / Login</a
+          >
+        </li>
+      </ul>
     </aside>
 
     <header>
-        <div class="header-container">
-            
-            <div class="logo">
-                <a href="#inicio">
-                    <img src="img/logo-clara.png" alt="Prospec Edu" class="logo-light">
-                    <img src="img/logo-prospecto-branca.png" alt="Prospec Edu" class="logo-dark">
-                </a>
-            </div>
-            
-            <nav class="main-nav">
-                <ul>
-                    <li><a href="#inicio">INÍCIO</a></li>
-                    <li><a href="#consultoria">CONSULTORIA</a></li>
-                    <li><a href="#modulos">MÓDULOS</a></li>
-                </ul>
-            </nav>
+      <div class="header-container">
+        <div class="logo">
+          <a href="#inicio">
+            <img
+              src="img/logo-clara.png"
+              alt="Prospec Edu"
+              class="logo-light"
+            />
+            <img
+              src="img/logo-prospecto-branca.png"
+              alt="Prospec Edu"
+              class="logo-dark"
+            />
+          </a>
+        </div>
 
-            <div class="user-controls">
-                <div class="auth-buttons">
-                    <a href="login.html" class="btn-register">Login</a>
-                </div>
-                
-                <button id="theme-toggle" class="theme-btn" aria-label="Alternar Tema">
-                    <i class="fas fa-moon"></i>
-                </button>
-                
-                <button id="menu-btn" class="menu-btn" aria-label="Menu">
-                    <i class="fas fa-bars"></i> 
-                </button>
-            </div>
+        <nav class="main-nav">
+          <ul>
+            <li><a href="#inicio">INÍCIO</a></li>
+            <li><a href="#consultoria">CONSULTORIA</a></li>
+            <li><a href="#modulos">MÓDULOS</a></li>
+          </ul>
+        </nav>
 
-        </div> 
-        <div class="header-border"></div> 
+        <div class="user-controls">
+          <div class="auth-buttons">
+            <a href="login.html" class="btn-register">Login</a>
+          </div>
+
+          <button
+            id="theme-toggle"
+            class="theme-btn"
+            aria-label="Alternar Tema"
+          >
+            <i class="fas fa-moon"></i>
+          </button>
+
+          <button id="menu-btn" class="menu-btn" aria-label="Menu">
+            <i class="fas fa-bars"></i>
+          </button>
+        </div>
+      </div>
+      <div class="header-border"></div>
     </header>
 
     <main>
-        <section id="inicio" class="hero content-box">
-            <h1 class="attention-title">A Prospec Edu: Consultoria Estratégica para a Implementação Obrigatória da BNCC</h1>
-            <p>O Projeto Prospec Edu é uma consultoria educacional e tecnológica focada em auxiliar secretarias municipais de educação em todo o Brasil na aplicação prática e efetiva da BNCC.</p>
-        </section>
+      <section id="inicio" class="hero content-box">
+        <h1 class="attention-title">
+          A Prospec Edu: Consultoria Estratégica para a Implementação
+          Obrigatória da BNCC
+        </h1>
+        <p>
+          O Projeto Prospec Edu é uma consultoria educacional e tecnológica
+          focada em auxiliar secretarias municipais de educação em todo o Brasil
+          na aplicação prática e efetiva da BNCC.
+        </p>
+      </section>
 
-        <section id="consultoria" class="services-seal content-box">
-            <div class="services-list">
-                <ul>
-                    <li><i class="fas fa-map-marked-alt text-purple"></i> Alinhamento Curricular Local</li>
-                    <li><i class="fas fa-graduation-cap text-purple"></i> Formação e Capacitação</li>
-                    <li><i class="fas fa-chart-line text-purple"></i> Gestão Orientada por Dados</li>
-                    <li><i class="fas fa-laptop-code text-purple"></i> Integração de Tecnologia</li>
-                </ul>
+      <section id="consultoria" class="services-seal content-box">
+        <div class="services-list">
+          <ul>
+            <li>
+              <i class="fas fa-map-marked-alt text-purple"></i> Alinhamento
+              Curricular Local
+            </li>
+            <li>
+              <i class="fas fa-graduation-cap text-purple"></i> Formação e
+              Capacitação
+            </li>
+            <li>
+              <i class="fas fa-chart-line text-purple"></i> Gestão Orientada por
+              Dados
+            </li>
+            <li>
+              <i class="fas fa-laptop-code text-purple"></i> Integração de
+              Tecnologia
+            </li>
+          </ul>
+        </div>
+
+        <div class="quality-seal">
+          <img src="img/favicon.png" alt="Selo P" class="seal-img" />
+          <div class="seal-text">
+            <h3>SELO DE QUALIDADE</h3>
+            <blockquote>
+              "A Prospec Edu foi fundamental para transformarmos a BNCC de
+              teoria em prática."
+            </blockquote>
+          </div>
+        </div>
+      </section>
+      <!-- Section das cidades parceiras -->
+      <section id="cidades" class="cidades content-box">
+        <h2>Cidades Parceiras em Destaque</h2>
+        <div class="cidades-grid">
+          <article class="cidade-card">
+            <div class="card-icon">
+              <i class="fas fa-map-marker-alt"></i>
             </div>
-            
-            <div class="quality-seal">
-                <img src="img/favicon.png" alt="Selo P" class="seal-img">
-                <div class="seal-text">
-                    <h3>SELO DE QUALIDADE</h3>
-                    <blockquote>"A Prospec Edu foi fundamental para transformarmos a BNCC de teoria em prática."</blockquote>
+            <h4>Cidade Parceira</h4>
+            <h3>Rio Tinto, PB</h3>
+
+            <div class="dados">
+              <div>
+                <i class="fas fa-users"></i>
+                <p><strong>160</strong> Professores</p>
+              </div>
+              <div>
+                <i class="fas fa-school"></i>
+                <p><strong>25</strong> Escolas</p>
+              </div>
+            </div>
+
+            <div class="carrossel-fotos">
+              <h4>Ações Realizadas</h4>
+              <div class="carrossel">
+                <button class="prev">&#10094;</button>
+                <div class="fotos">
+                  <img
+                    src="img/cidades-parceiras/Rio-tinto/RT-instalacao01.jpeg"
+                    alt="Ação 1"
+                  />
+                  <img
+                    src="img/cidades-parceiras/Rio-tinto/RT-instalacao02.jpeg"
+                    alt="Ação 2"
+                  />
+                  <img
+                    src="img/cidades-parceiras/Rio-tinto/RT-instalacao03.jpeg"
+                    alt="Ação 3"
+                  />
                 </div>
+                <button class="next">&#10095;</button>
+              </div>
             </div>
-        </section>
+          </article>
+        </div>
+      </section>
 
-        <section id="modulos" class="modules content-box">
-            <h2>Módulos de Formação BNCC em Destaque</h2>
-            <div class="modules-grid">
-                
-                <article class="module-card">
-                    <div class="card-icon"><i class="fas fa-compass"></i></div>
-                    <h4>Módulo 1</h4>
-                    <h3>FUNDAMENTOS DA BNCC</h3>
-                    <p>Compreendendo as Competências</p>
-                    <div class="progress-bar">
-                        <div class="progress" style="width: 0%;"></div>
-                        <span class="progress-label">0%</span>
-                    </div>
-                    <a href="#" class="btn btn-secondary"><i class="fas fa-lock"></i> Bloqueado</a>
-                </article>
+      <section id="modulos" class="modules content-box">
+        <h2>Módulos de Formação BNCC em Destaque</h2>
+        <div class="modules-grid">
+          <article class="module-card">
+            <div class="card-icon"><i class="fas fa-compass"></i></div>
+            <h4>Módulo 1</h4>
+            <h3>FUNDAMENTOS DA BNCC</h3>
+            <p>Compreendendo as Competências</p>
+            <div class="progress-bar">
+              <div class="progress" style="width: 0%"></div>
+              <span class="progress-label">0%</span>
+            </div>
+            <a href="#" class="btn btn-secondary"
+              ><i class="fas fa-lock"></i> Bloqueado</a
+            >
+          </article>
+          <article class="module-card">
+            <div class="card-icon"><i class="fas fa-child"></i></div>
+            <h4>Módulo 2</h4>
+            <h3>EDUCAÇÃO INFANTIL</h3>
+            <p>Campos de Experiência</p>
+            <div class="progress-bar">
+              <div class="progress" style="width: 0%"></div>
+              <span class="progress-label">0%</span>
+            </div>
+            <a href="#" class="btn btn-secondary"
+              ><i class="fas fa-lock"></i> Bloqueado</a
+            >
+          </article>
 
-                 <article class="module-card">
-                    <div class="card-icon"><i class="fas fa-child"></i></div>
-                    <h4>Módulo 2</h4>
-                    <h3>EDUCAÇÃO INFANTIL</h3>
-                    <p>Campos de Experiência</p>
-                    <div class="progress-bar">
-                        <div class="progress" style="width: 0%;"></div>
-                        <span class="progress-label">0%</span>
-                    </div>
-                    <a href="#" class="btn btn-secondary"><i class="fas fa-lock"></i> Bloqueado</a>
-                </article>
+          <article class="module-card">
+            <div class="card-icon"><i class="fas fa-school"></i></div>
+            <h4>Módulo 3</h4>
+            <h3>ENSINO FUNDAMENTAL</h3>
+            <p>Áreas do Conhecimento</p>
+            <div class="progress-bar">
+              <div class="progress" style="width: 0%"></div>
+              <span class="progress-label">0%</span>
+            </div>
+            <a href="#" class="btn btn-secondary"
+              ><i class="fas fa-lock"></i> Bloqueado</a
+            >
+          </article>
 
-                 <article class="module-card">
-                    <div class="card-icon"><i class="fas fa-school"></i></div>
-                    <h4>Módulo 3</h4>
-                    <h3>ENSINO FUNDAMENTAL</h3>
-                    <p>Áreas do Conhecimento</p>
-                    <div class="progress-bar">
-                        <div class="progress" style="width: 0%;"></div>
-                        <span class="progress-label">0%</span>
-                    </div>
-                    <a href="#" class="btn btn-secondary"><i class="fas fa-lock"></i> Bloqueado</a>
-                </article>
-
-                 <article class="module-card">
-                    <div class="card-icon"><i class="fas fa-clipboard-check"></i></div>
-                    <h4>Módulo 4</h4>
-                    <h3>AVALIAÇÃO NA BNCC</h3>
-                    <p>Estratégias Práticas</p>
-                    <div class="progress-bar">
-                        <div class="progress" style="width: 0%;"></div>
-                        <span class="progress-label">0%</span>
-                    </div>
-                    <a href="#" class="btn btn-secondary"><i class="fas fa-lock"></i> Bloqueado</a>
-                </article>
-
-            </div> 
-        </section> 
-    </main> 
+          <article class="module-card">
+            <div class="card-icon"><i class="fas fa-clipboard-check"></i></div>
+            <h4>Módulo 4</h4>
+            <h3>AVALIAÇÃO NA BNCC</h3>
+            <p>Estratégias Práticas</p>
+            <div class="progress-bar">
+              <div class="progress" style="width: 0%"></div>
+              <span class="progress-label">0%</span>
+            </div>
+            <a href="#" class="btn btn-secondary"
+              ><i class="fas fa-lock"></i> Bloqueado</a
+            >
+          </article>
+        </div>
+      </section>
+    </main>
 
     <footer>
-        <div class="footer-top">
-            <img src="img/favicon.png" alt="Selo Prospec Edu" class="footer-logo-minimal">
-            <a href="#inicio" class="back-to-top"><i class="fas fa-chevron-up"></i> Voltar ao topo</a>
+      <div class="footer-top">
+        <img
+          src="img/favicon.png"
+          alt="Selo Prospec Edu"
+          class="footer-logo-minimal"
+        />
+        <a href="#inicio" class="back-to-top"
+          ><i class="fas fa-chevron-up"></i> Voltar ao topo</a
+        >
+      </div>
+
+      <div class="footer-divider"></div>
+
+      <div class="footer-main">
+        <div class="footer-mascot">
+          <img
+            src="img/Mascote_Edu(Sem_Fundo).png"
+            alt="Mascote Edu"
+            class="mascot-img"
+          />
         </div>
 
-        <div class="footer-divider"></div>
-
-        <div class="footer-main">
-            
-            <div class="footer-mascot">
-                <img src="img/Mascote_Edu(Sem_Fundo).png" alt="Mascote Edu" class="mascot-img">
-            </div>
-
-            <div class="footer-col">
-                <h4>Navegação</h4>
-                <ul>
-                    <li><a href="#inicio">Início</a></li>
-                    <li><a href="#consultoria">Consultoria BNCC</a></li>
-                    <li><a href="#modulos">Módulos de Formação</a></li>
-                </ul>
-            </div>
-
-            <div class="footer-col">
-                <h4>Fale Conosco</h4>
-                <ul>
-                    <li><a href="mailto:prospeceduofc@prospecedu.com.br"><i class="fas fa-envelope"></i> prospeceduofc@prospecedu.com.br</a></li>
-                    <li><a href="https://wa.me/5581971094896" target="_blank"><i class="fab fa-whatsapp"></i> (81) 97109-4896</a></li>
-                </ul>
-            </div>
-
-            <div class="footer-col social-col">
-                <h4>Siga-nos</h4>
-                <div class="social-icons">
-                    <a href="https://www.instagram.com/prospecedu/" target="_blank" aria-label="Instagram">
-                        <i class="fab fa-instagram"></i>
-                    </a>
-                    <a href="#" target="_blank" aria-label="LinkedIn">
-                        <i class="fab fa-linkedin-in"></i>
-                    </a>
-                </div>
-            </div>
-
+        <div class="footer-col">
+          <h4>Navegação</h4>
+          <ul>
+            <li><a href="#inicio">Início</a></li>
+            <li><a href="#consultoria">Consultoria BNCC</a></li>
+            <li><a href="#modulos">Módulos de Formação</a></li>
+          </ul>
         </div>
 
-        <div class="footer-divider"></div>
-
-        <div class="footer-bottom">
-            <p>&copy; 2026 Prospectiva Educacional. Todos os direitos reservados.</p>
+        <div class="footer-col">
+          <h4>Fale Conosco</h4>
+          <ul>
+            <li>
+              <a href="mailto:prospeceduofc@prospecedu.com.br"
+                ><i class="fas fa-envelope"></i>
+                prospeceduofc@prospecedu.com.br</a
+              >
+            </li>
+            <li>
+              <a href="https://wa.me/5581971094896" target="_blank"
+                ><i class="fab fa-whatsapp"></i> (81) 97109-4896</a
+              >
+            </li>
+          </ul>
         </div>
+
+        <div class="footer-col social-col">
+          <h4>Siga-nos</h4>
+          <div class="social-icons">
+            <a
+              href="https://www.instagram.com/prospecedu/"
+              target="_blank"
+              aria-label="Instagram"
+            >
+              <i class="fab fa-instagram"></i>
+            </a>
+            <a href="#" target="_blank" aria-label="LinkedIn">
+              <i class="fab fa-linkedin-in"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-divider"></div>
+
+      <div class="footer-bottom">
+        <p>
+          &copy; 2026 Prospectiva Educacional. Todos os direitos reservados.
+        </p>
+      </div>
     </footer>
 
     <script src="js/script.js"></script>
-</body>
+  </body>
 </html>
