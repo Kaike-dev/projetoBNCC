@@ -1,188 +1,332 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="pt-BR">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Prospec Edu | Consultoria e Formação BNCC</title>
-    <link rel="icon" type="image/png" href="img/favicon.png">
-    <link href="https://fonts.googleapis.com/css2?family=Segoe+UI:wght@400;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    <link rel="stylesheet" href="css/style.css">
-</head>
-<body>
-
+    <link rel="icon" type="image/png" href="img/favicon.png" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Segoe+UI:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
     <aside id="sidebar" class="sidebar">
-        <button id="close-btn" class="close-btn" aria-label="Fechar menu">&times;</button>
-        <div class="logo">
-                <a href="#inicio">
-                    <img src="img/logo-clara.png" alt="Prospec Edu" class="logo-light">
-                    <img src="img/logo-prospecto-branca.png" alt="Prospec Edu" class="logo-dark">
-                </a>
-            </div>
-        <ul>
-            <li><a href="#inicio"><i class="fas fa-home"></i> Início</a></li>
-            <li><a href="#consultoria"><i class="fas fa-chalkboard-teacher"></i> Consultoria BNCC</a></li>
-            <li><a href="login.html"><i class="fas fa-sign-in-alt"></i> Entrar / Login</a></li>
-        </ul>
+      <button id="close-btn" class="close-btn" aria-label="Fechar menu">
+        &times;
+      </button>
+      <div class="logo">
+        <a href="#inicio">
+          <img src="img/logo-clara.png" alt="Prospec Edu" class="logo-light" />
+          <img
+            src="img/logo-prospecto-branca.png"
+            alt="Prospec Edu"
+            class="logo-dark"
+          />
+        </a>
+      </div>
+      <ul>
+        <li>
+          <a href="#inicio"><i class="fas fa-home"></i> Início</a>
+        </li>
+        <li>
+          <a href="#consultoria"
+            ><i class="fas fa-chalkboard-teacher"></i> Consultoria BNCC</a
+          >
+        </li>
+        <li>
+          <a href="login.html"
+            ><i class="fas fa-sign-in-alt"></i> Entrar / Login</a
+          >
+        </li>
+      </ul>
     </aside>
 
     <header>
-        <div class="header-container">
-            
-            <div class="logo">
-                <a href="#inicio">
-                    <img src="img/logo-clara.png" alt="Prospec Edu" class="logo-light">
-                    <img src="img/logo-prospecto-branca.png" alt="Prospec Edu" class="logo-dark">
-                </a>
-            </div>
-            
-            <nav class="main-nav">
-                <ul>
-                    <li><a href="#inicio">INÍCIO</a></li>
-                    <li><a href="#consultoria">CONSULTORIA</a></li>
-                </ul>
-            </nav>
+      <div class="header-container">
+        <div class="logo">
+          <a href="#inicio">
+            <img
+              src="img/logo-clara.png"
+              alt="Prospec Edu"
+              class="logo-light"
+            />
+            <img
+              src="img/logo-prospecto-branca.png"
+              alt="Prospec Edu"
+              class="logo-dark"
+            />
+          </a>
+        </div>
 
-            <div class="user-controls">
-                <div class="auth-buttons">
-                    <a href="login.html" class="btn-register">Login</a>
-                </div>
-                
-                <button id="theme-toggle" class="theme-btn" aria-label="Alternar Tema">
-                    <i class="fas fa-moon"></i>
-                </button>
-                
-                <button id="menu-btn" class="menu-btn" aria-label="Menu">
-                    <i class="fas fa-bars"></i> 
-                </button>
-            </div>
+        <nav class="main-nav">
+          <ul>
+            <li><a href="#inicio">INÍCIO</a></li>
+            <li><a href="#consultoria">CONSULTORIA</a></li>
+          </ul>
+        </nav>
 
-        </div> 
-        <div class="header-border"></div> 
+        <div class="user-controls">
+          <div class="auth-buttons">
+            <a href="login.html" class="btn-register">Login</a>
+          </div>
+
+          <button
+            id="theme-toggle"
+            class="theme-btn"
+            aria-label="Alternar Tema"
+          >
+            <i class="fas fa-moon"></i>
+          </button>
+
+          <button id="menu-btn" class="menu-btn" aria-label="Menu">
+            <i class="fas fa-bars"></i>
+          </button>
+        </div>
+      </div>
+      <div class="header-border"></div>
     </header>
 
     <main>
-        <section id="inicio" class="hero-modern content-box">
-            <div class="hero-text">
-                <span class="badge-tech">Inovação na Educação</span>
-                <h1 class="hero-title">Uma nova <br><span class="text-purple">perspectiva educacional</span></h1>
-                <p>A Prospec Edu prepara sua rede de ensino para o futuro, integrando tecnologia e educação com foco na implementação prática e estratégica da BNCC da computação no seu município.</p>
-                <div class="hero-buttons">
-                    <a href="#trabalho" class="btn btn-primary">Conheça nosso trabalho</a>
-                    <a href="#bncc" class="btn btn-secondary-outline">Entenda a BNCC</a>
-                </div>
-            </div>
-            <div class="hero-image">
-                <img src="img/Mascote_Edu(Sem_Fundo).png" alt="Mascote Edu" class="mascot-float">
-            </div>
-        </section>
+      <section id="inicio" class="hero-modern content-box">
+        <div class="hero-text">
+          <span class="badge-tech">Inovação na Educação</span>
+          <h1 class="hero-title">
+            Uma nova <br /><span class="text-purple"
+              >perspectiva educacional</span
+            >
+          </h1>
+          <p>
+            A Prospec Edu prepara sua rede de ensino para o futuro, integrando
+            tecnologia e educação com foco na implementação prática e
+            estratégica da BNCC da computação no seu município.
+          </p>
+          <div class="hero-buttons">
+            <a href="#trabalho" class="btn btn-primary"
+              >Conheça nosso trabalho</a
+            >
+            <a href="#bncc" class="btn btn-secondary-outline">Entenda a BNCC</a>
+          </div>
+        </div>
+        <div class="hero-image">
+          <img
+            src="img/Mascote_Edu(Sem_Fundo).png"
+            alt="Mascote Edu"
+            class="mascot-float"
+          />
+        </div>
+      </section>
 
-        <section id="trabalho" class="about-section content-box">
-            <div class="about-grid">
-                <div class="about-content">
-                    <h2 class="section-title">Quem Somos & Nosso Trabalho</h2>
-                    <p>Somos uma consultoria especializada em unir a pedagogia à tecnologia. Nosso trabalho é garantir que secretarias municipais e escolas não apenas cumpram as exigências legais do MEC, mas transformem a realidade dos alunos através de metodologias inovadoras.</p>
-                    <ul class="features-list">
-                        <li><i class="fas fa-check-circle text-purple"></i> Formação e Capacitação Continuada</li>
-                        <li><i class="fas fa-check-circle text-purple"></i> Alinhamento Curricular Local</li>
-                        <li><i class="fas fa-check-circle text-purple"></i> Gestão Estratégica Orientada por Dados</li>
-                    </ul>
-                </div>
-                <div class="about-stats">
-                    <div class="stat-card">
-                        <i class="fas fa-laptop-code text-purple"></i>
-                        <h3>Tecnologia</h3>
-                        <p>Integração prática em sala de aula</p>
-                    </div>
-                    <div class="stat-card">
-                        <i class="fas fa-chalkboard-teacher text-purple"></i>
-                        <h3>Educação</h3>
-                        <p>Foco total no desenvolvimento do aluno</p>
-                    </div>
-                </div>
+      <section id="trabalho" class="about-section content-box">
+        <div class="about-grid">
+          <div class="about-content">
+            <h2 class="section-title">Quem Somos & Nosso Trabalho</h2>
+            <p>
+              Somos uma consultoria especializada em unir a pedagogia à
+              tecnologia. Nosso trabalho é garantir que secretarias municipais e
+              escolas não apenas cumpram as exigências legais do MEC, mas
+              transformem a realidade dos alunos através de metodologias
+              inovadoras.
+            </p>
+            <ul class="features-list">
+              <li>
+                <i class="fas fa-check-circle text-purple"></i> Formação e
+                Capacitação Continuada
+              </li>
+              <li>
+                <i class="fas fa-check-circle text-purple"></i> Alinhamento
+                Curricular Local
+              </li>
+              <li>
+                <i class="fas fa-check-circle text-purple"></i> Gestão
+                Estratégica Orientada por Dados
+              </li>
+            </ul>
+          </div>
+          <div class="about-stats">
+            <div class="stat-card">
+              <i class="fas fa-laptop-code text-purple"></i>
+              <h3>Tecnologia</h3>
+              <p>Integração prática em sala de aula</p>
             </div>
-        </section>
+            <div class="stat-card">
+              <i class="fas fa-chalkboard-teacher text-purple"></i>
+              <h3>Educação</h3>
+              <p>Foco total no desenvolvimento do aluno</p>
+            </div>
+          </div>
+        </div>
+      </section>
 
-        <section id="bncc" class="bncc-section content-box">
-            <div class="bncc-header">
-                <h2 class="section-title">A BNCC da Computação</h2>
-                <p class="subtitle">A computação agora é obrigatória na Educação Básica. Nós ajudamos sua rede a dominar os 3 eixos fundamentais:</p>
+      <!-- Section das cidades parceiras -->
+      <section id="cidades" class="cidades content-box">
+        <h2 class="section-title">Cidades Parceiras em Destaque</h2>
+        <div class="cidades-grid">
+          <article class="cidade-card">
+            <div class="info">
+              <div class="card-icon">
+                <i class="fas fa-map-marker-alt"></i>
+              </div>
+              <h4>Cidade Parceira</h4>
+              <h3>Rio Tinto, PB</h3>
+
+              <div class="dados">
+                <div>
+                  <i class="fas fa-users"></i>
+                  <p><strong>160</strong> Professores</p>
+                </div>
+                <div>
+                  <i class="fas fa-school"></i>
+                  <p><strong>25</strong> Escolas</p>
+                </div>
+              </div>
             </div>
-            
-            <div class="bncc-grid">
-                <div class="bncc-card">
-                    <div class="icon-wrapper"><i class="fas fa-brain"></i></div>
-                    <h3>Pensamento Computacional</h3>
-                    <p>Desenvolvimento de habilidades para resolução de problemas complexos, raciocínio lógico e criação de algoritmos desde a educação infantil.</p>
-                </div>
-                
-                <div class="bncc-card">
-                    <div class="icon-wrapper"><i class="fas fa-globe"></i></div>
-                    <h3>Mundo Digital</h3>
-                    <p>Compreensão de como os computadores, a internet e a tecnologia funcionam, preparando os alunos para serem criadores de tecnologia.</p>
-                </div>
-                
-                <div class="bncc-card">
-                    <div class="icon-wrapper"><i class="fas fa-users"></i></div>
-                    <h3>Cultura Digital</h3>
-                    <p>Foco no uso ético, crítico, responsável e seguro das tecnologias digitais para a comunicação, colaboração e exercício pleno da cidadania.</p>
-                </div>
+
+            <div class="carrossel">
+              <div class="slides">
+                <img
+                  src="img/cidades-parceiras/Rio-tinto/RT.foto01.png"
+                  alt="Ação 1"
+                />
+                <img
+                  src="img/cidades-parceiras/Rio-tinto/RT.foto02.png"
+                  alt="Ação 2"
+                />
+                <img
+                  src="img/cidades-parceiras/Rio-tinto/RT.foto03.png"
+                  alt="Ação 3"
+                />
+              </div>
+              <button class="esquerda">&#10094;</button>
+              <button class="direita">&#10095;</button>
             </div>
-        </section>
-    </main> 
+          </article>
+        </div>
+      </section>
+
+      <section id="bncc" class="bncc-section content-box">
+        <div class="bncc-header">
+          <h2 class="section-title">A BNCC da Computação</h2>
+          <p class="subtitle">
+            A computação agora é obrigatória na Educação Básica. Nós ajudamos
+            sua rede a dominar os 3 eixos fundamentais:
+          </p>
+        </div>
+
+        <div class="bncc-grid">
+          <div class="bncc-card">
+            <div class="icon-wrapper"><i class="fas fa-brain"></i></div>
+            <h3>Pensamento Computacional</h3>
+            <p>
+              Desenvolvimento de habilidades para resolução de problemas
+              complexos, raciocínio lógico e criação de algoritmos desde a
+              educação infantil.
+            </p>
+          </div>
+
+          <div class="bncc-card">
+            <div class="icon-wrapper"><i class="fas fa-globe"></i></div>
+            <h3>Mundo Digital</h3>
+            <p>
+              Compreensão de como os computadores, a internet e a tecnologia
+              funcionam, preparando os alunos para serem criadores de
+              tecnologia.
+            </p>
+          </div>
+
+          <div class="bncc-card">
+            <div class="icon-wrapper"><i class="fas fa-users"></i></div>
+            <h3>Cultura Digital</h3>
+            <p>
+              Foco no uso ético, crítico, responsável e seguro das tecnologias
+              digitais para a comunicação, colaboração e exercício pleno da
+              cidadania.
+            </p>
+          </div>
+        </div>
+      </section>
+    </main>
 
     <footer>
-        <div class="footer-top">
-            <img src="img/favicon.png" alt="Selo Prospec Edu" class="footer-logo-minimal">
-            <a href="#inicio" class="back-to-top"><i class="fas fa-chevron-up"></i> Voltar ao topo</a>
+      <div class="footer-top">
+        <img
+          src="img/favicon.png"
+          alt="Selo Prospec Edu"
+          class="footer-logo-minimal"
+        />
+        <a href="#inicio" class="back-to-top"
+          ><i class="fas fa-chevron-up"></i> Voltar ao topo</a
+        >
+      </div>
+
+      <div class="footer-divider"></div>
+
+      <div class="footer-main">
+        <div class="footer-mascot">
+          <img
+            src="img/Mascote_Edu(Sem_Fundo).png"
+            alt="Mascote Edu"
+            class="mascot-img"
+          />
         </div>
 
-        <div class="footer-divider"></div>
-
-        <div class="footer-main">
-            
-            <div class="footer-mascot">
-                <img src="img/Mascote_Edu(Sem_Fundo).png" alt="Mascote Edu" class="mascot-img">
-            </div>
-
-            <div class="footer-col">
-                <h4>Navegação</h4>
-                <ul>
-                    <li><a href="#inicio">Início</a></li>
-                    <li><a href="#consultoria">Consultoria BNCC</a></li>
-                    <li><a href="#modulos">Módulos de Formação</a></li>
-                </ul>
-            </div>
-
-            <div class="footer-col">
-                <h4>Fale Conosco</h4>
-                <ul>
-                    <li><a href="mailto:prospeceduofc@prospecedu.com.br"><i class="fas fa-envelope"></i> prospeceduofc@prospecedu.com.br</a></li>
-                    <li><a href="https://wa.me/5581971094896" target="_blank"><i class="fab fa-whatsapp"></i> (81) 97109-4896</a></li>
-                </ul>
-            </div>
-
-            <div class="footer-col social-col">
-                <h4>Siga-nos</h4>
-                <div class="social-icons">
-                    <a href="https://www.instagram.com/prospecedu/" target="_blank" aria-label="Instagram">
-                        <i class="fab fa-instagram"></i>
-                    </a>
-                    <a href="#" target="_blank" aria-label="LinkedIn">
-                        <i class="fab fa-linkedin-in"></i>
-                    </a>
-                </div>
-            </div>
-
+        <div class="footer-col">
+          <h4>Navegação</h4>
+          <ul>
+            <li><a href="#inicio">Início</a></li>
+            <li><a href="#consultoria">Consultoria BNCC</a></li>
+            <li><a href="#modulos">Módulos de Formação</a></li>
+          </ul>
         </div>
 
-        <div class="footer-divider"></div>
-
-        <div class="footer-bottom">
-            <p>&copy; 2026 Prospectiva Educacional. Todos os direitos reservados.</p>
+        <div class="footer-col">
+          <h4>Fale Conosco</h4>
+          <ul>
+            <li>
+              <a href="mailto:prospeceduofc@prospecedu.com.br"
+                ><i class="fas fa-envelope"></i>
+                prospeceduofc@prospecedu.com.br</a
+              >
+            </li>
+            <li>
+              <a href="https://wa.me/5581971094896" target="_blank"
+                ><i class="fab fa-whatsapp"></i> (81) 97109-4896</a
+              >
+            </li>
+          </ul>
         </div>
+
+        <div class="footer-col social-col">
+          <h4>Siga-nos</h4>
+          <div class="social-icons">
+            <a
+              href="https://www.instagram.com/prospecedu/"
+              target="_blank"
+              aria-label="Instagram"
+            >
+              <i class="fab fa-instagram"></i>
+            </a>
+            <a href="#" target="_blank" aria-label="LinkedIn">
+              <i class="fab fa-linkedin-in"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-divider"></div>
+
+      <div class="footer-bottom">
+        <p>
+          &copy; 2026 Prospectiva Educacional. Todos os direitos reservados.
+        </p>
+      </div>
     </footer>
 
     <script src="js/script.js"></script>
-</body>
+  </body>
 </html>
