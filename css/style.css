@@ -569,6 +569,8 @@ footer {
     display: flex;
     align-items: center;
     gap: 10px;
+    
+    word-break: break-word; 
 }
 
 .footer-col ul li a:hover {
