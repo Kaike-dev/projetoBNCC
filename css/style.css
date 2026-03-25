@@ -574,7 +574,8 @@ footer {
 }
 
 .footer-col ul li a:hover {
-    color: var(--roxo-acento);
+    color: #80c1ff; 
+    text-decoration: underline; 
 }
 
 .social-col .social-icons {
@@ -651,6 +652,8 @@ body.dark-mode {
     --azul-header: #66b2ff;
     --azul-primario: #80c1ff;
     --texto-escuro: #e1e8f0;
+    
+    --roxo-acento: #b285ff; 
     
     --sombra: none; 
     --sombra-header: none;
@@ -1052,5 +1055,40 @@ body.dark-mode .bncc-card p { color: #aaa; }
     .carrossel {
         width: 100%; 
         margin: 0 auto; 
+    }
+}
+
+.btn-register {
+    color: var(--roxo-acento);
+    font-weight: 700;
+    padding: 6px 20px;
+    border: 2px solid var(--roxo-acento);
+    border-radius: 20px;
+    transition: all var(--transition-suave);
+    display: inline-block;
+}
+
+.btn-register:hover {
+    background-color: var(--roxo-acento);
+    color: var(--branco); 
+}
+
+body.dark-mode .btn-register {
+    color: #b285ff; 
+    border-color: #b285ff;
+}
+
+body.dark-mode .btn-register:hover {
+    background-color: #b285ff;
+    color: #1a1e23; 
+}
+
+.menu-btn {
+    display: none; 
+}
+
+@media (max-width: 768px) {
+    .menu-btn {
+        display: block; 
     }
 }
