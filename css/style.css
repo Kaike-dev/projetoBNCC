@@ -1092,3 +1092,51 @@ body.dark-mode .btn-register:hover {
         display: block; 
     }
 }
+
+.content-box {
+    background: transparent !important;
+    box-shadow: none !important;
+    border-radius: 0 !important;
+    margin-bottom: 0 !important;
+    padding: 5rem 0 !important; 
+}
+
+.hero-modern, 
+body.dark-mode .hero-modern {
+    background: transparent !important;
+}
+
+section:not(#inicio) {
+    border-top: 1px solid rgba(0, 0, 0, 0.08); 
+}
+
+
+body.dark-mode section:not(#inicio) {
+    border-top: 1px solid rgba(255, 255, 255, 0.05); 
+}
+
+.header-container {
+    padding: 2rem 5% !important; 
+}
+
+.logo-light, 
+.logo-dark {
+    height: 140px !important; 
+    width: auto !important; 
+    max-width: 400px !important; 
+}
+
+header.encolhido .header-container {
+    padding: 1rem 5% !important; 
+}
+
+header.encolhido .logo-light,
+header.encolhido .logo-dark {
+    height: 90px !important; 
+}
+
+.header-container,
+.logo-light, 
+.logo-dark {
+    transition: all 0.3s ease-in-out !important; 
+}
