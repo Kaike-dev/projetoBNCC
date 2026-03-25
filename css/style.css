@@ -967,3 +967,88 @@ body.dark-mode .bncc-card p { color: #aaa; }
     .hero-buttons { justify-content: center; flex-wrap: wrap; }
     .about-grid { grid-template-columns: 1fr; }
 }
+.cidades .section-title {
+    text-align: center;
+}
+
+.carrossel {
+    max-width: 100%; 
+    overflow: hidden;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.25);
+    border-radius: 10px;
+    position: relative;
+    margin-top: 0;
+    margin-right: 0;
+    height: auto;
+    flex: 1; 
+}
+
+.cidade-card {
+    display: flex;
+    justify-content: flex-start; 
+    align-items: flex-start;
+    gap: 5px; 
+}
+
+.info {
+    padding: 0 15px; 
+    max-width: 100%; 
+    text-align: center;
+    flex: 1; 
+}
+
+.slides {
+    display: flex;
+    transition: transform 1s cubic-bezier(0.25, 0.1, 0.25, 1);
+}
+
+.slides img {
+    display: block;
+    max-width: 100%;
+}
+
+.carrossel button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    border: none;
+    background-color: rgba(0, 0, 0, 0.486);
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+    color: white;
+    cursor: pointer;
+    transition: background-color 200ms ease;
+}
+
+.carrossel button:hover {
+    background-color: black;
+}
+
+.carrossel .esquerda {
+    left: 10px;
+}
+
+.carrossel .direita {
+    right: 10px;
+}
+
+
+@media (max-width: 768px) {
+    .cidade-card {
+        flex-direction: column; 
+        align-items: center; 
+        gap: 15px; 
+    }
+
+    .info i {
+        width: 100%; 
+        text-align: center; 
+    }
+
+    .carrossel {
+        width: 100%; 
+        margin: 0 auto; 
+    }
+}
