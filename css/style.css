@@ -567,10 +567,13 @@ footer {
   display: flex;
   align-items: center;
   gap: 10px;
+
+  word-break: break-word;
 }
 
 .footer-col ul li a:hover {
-  color: var(--roxo-acento);
+  color: #80c1ff;
+  text-decoration: underline;
 }
 
 .social-col .social-icons {
@@ -649,6 +652,8 @@ body.dark-mode {
   --azul-header: #66b2ff;
   --azul-primario: #80c1ff;
   --texto-escuro: #e1e8f0;
+
+  --roxo-acento: #b285ff;
 
   --sombra: none;
   --sombra-header: none;
@@ -999,17 +1004,12 @@ body.dark-mode .bncc-card p {
     grid-template-columns: 1fr;
   }
 }
-
-
-/* Cidades e Carrossel */
-
-
 .cidades .section-title {
   text-align: center;
 }
 
 .carrossel {
-  max-width: 100%; 
+  max-width: 100%;
   overflow: hidden;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.25);
   border-radius: 10px;
@@ -1017,21 +1017,21 @@ body.dark-mode .bncc-card p {
   margin-top: 0;
   margin-right: 0;
   height: auto;
-  flex: 1; /* ocupa o espaço restante */
+  flex: 1;
 }
 
 .cidade-card {
   display: flex;
-  justify-content: flex-start; /* aproxima os elementos */
+  justify-content: flex-start;
   align-items: flex-start;
-  gap: 5px; /
+  gap: 5px;
 }
 
 .info {
-  padding: 0 15px; 
-  max-width: 100%; 
+  padding: 0 15px;
+  max-width: 100%;
   text-align: center;
-  flex: 1; 
+  flex: 1;
 }
 
 .slides {
@@ -1071,21 +1071,102 @@ body.dark-mode .bncc-card p {
   right: 10px;
 }
 
-/* Ajuste para telas menores */
 @media (max-width: 768px) {
   .cidade-card {
-    flex-direction: column; /* empilha os elementos */
-    align-items: center; 
-    gap: 15px; 
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
   }
 
   .info i {
-    width: 100%; 
-    text-align: center; 
+    width: 100%;
+    text-align: center;
   }
 
   .carrossel {
-    width: 100%; 
-    margin: 0 auto; /* centraliza */
+    width: 100%;
+    margin: 0 auto;
   }
+}
+
+.btn-register {
+  color: var(--roxo-acento);
+  font-weight: 700;
+  padding: 6px 20px;
+  border: 2px solid var(--roxo-acento);
+  border-radius: 20px;
+  transition: all var(--transition-suave);
+  display: inline-block;
+}
+
+.btn-register:hover {
+  background-color: var(--roxo-acento);
+  color: var(--branco);
+}
+
+body.dark-mode .btn-register {
+  color: #b285ff;
+  border-color: #b285ff;
+}
+
+body.dark-mode .btn-register:hover {
+  background-color: #b285ff;
+  color: #1a1e23;
+}
+
+.menu-btn {
+  display: none;
+}
+
+@media (max-width: 768px) {
+  .menu-btn {
+    display: block;
+  }
+}
+
+.content-box {
+  background: transparent !important;
+  box-shadow: none !important;
+  border-radius: 0 !important;
+  margin-bottom: 0 !important;
+  padding: 5rem 0 !important;
+}
+
+.hero-modern,
+body.dark-mode .hero-modern {
+  background: transparent !important;
+}
+
+section:not(#inicio) {
+  border-top: 1px solid rgba(0, 0, 0, 0.08);
+}
+
+body.dark-mode section:not(#inicio) {
+  border-top: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.header-container {
+  padding: 2rem 5% !important;
+}
+
+.logo-light,
+.logo-dark {
+  height: 140px !important;
+  width: auto !important;
+  max-width: 400px !important;
+}
+
+header.encolhido .header-container {
+  padding: 1rem 5% !important;
+}
+
+header.encolhido .logo-light,
+header.encolhido .logo-dark {
+  height: 90px !important;
+}
+
+.header-container,
+.logo-light,
+.logo-dark {
+  transition: all 0.3s ease-in-out !important;
 }

@@ -45,71 +45,72 @@ window.addEventListener("scroll", () => {
     }
   });
 });
-// --- LÓGICA DO MODO NOTURNO ---
+
 const themeToggleBtn = document.getElementById("theme-toggle");
 
 if (themeToggleBtn) {
   const themeIcon = themeToggleBtn.querySelector("i");
 
-  // Verifica se já estava no modo escuro
   if (localStorage.getItem("theme") === "dark") {
     document.body.classList.add("dark-mode");
     if (themeIcon) themeIcon.classList.replace("fa-moon", "fa-sun");
   }
-
-  // Ação de clique no botão
-  themeToggleBtn.addEventListener("click", () => {
-    document.body.classList.toggle("dark-mode");
-
-    const isDark = document.body.classList.contains("dark-mode");
-
-    if (isDark) {
-      if (themeIcon) themeIcon.classList.replace("fa-moon", "fa-sun");
-      localStorage.setItem("theme", "dark");
-    } else {
-      if (themeIcon) themeIcon.classList.replace("fa-sun", "fa-moon");
-      localStorage.setItem("theme", "light");
-    }
-  });
 }
 
-//cidades parceiras
+themeToggleBtn.addEventListener("click", () => {
+  document.body.classList.toggle("dark-mode");
 
-const slides = document.querySelector(".slides");
+  const isDark = document.body.classList.contains("dark-mode");
+
+  if (isDark) {
+    if (themeIcon) themeIcon.classList.replace("fa-moon", "fa-sun");
+    localStorage.setItem("theme", "dark");
+  } else {
+    if (themeIcon) themeIcon.classList.replace("fa-sun", "fa-moon");
+    localStorage.setItem("theme", "light");
+  }
+});
+
+const slidesContainer = document.querySelector(".slides");
 const imagens = document.querySelectorAll(".slides img");
 const btnEsquerda = document.querySelector(".esquerda");
 const btnDireita = document.querySelector(".direita");
 
-let indice = 0;
+if (slidesContainer && imagens.length > 0) {
+  let indice = 0;
 
-function mostrarSlide() {
-  const largura = imagens[0].clientWidth;
-  slides.style.transform = `translateX(${-indice * largura}px)`;
+  function mostrarSlide() {
+    const largura = imagens[0].clientWidth;
+    slidesContainer.style.transform = `translateX(${-indice * largura}px)`;
+  }
+
+  if (btnDireita) {
+    btnDireita.addEventListener("click", () => {
+      indice++;
+      if (indice >= imagens.length) {
+        indice = 0;
+      }
+      mostrarSlide();
+    });
+  }
+
+  if (btnEsquerda) {
+    btnEsquerda.addEventListener("click", () => {
+      indice--;
+      if (indice < 0) {
+        indice = imagens.length - 1;
+      }
+      mostrarSlide();
+    });
+  }
+
+  setInterval(() => {
+    indice++;
+    if (indice >= imagens.length) {
+      indice = 0;
+    }
+    mostrarSlide();
+  }, 3000);
+
+  window.addEventListener("resize", mostrarSlide);
 }
-
-// Botão direita
-btnDireita.addEventListener("click", () => {
-  indice++;
-  if (indice >= imagens.length) {
-    indice = 0;
-  }
-  mostrarSlide();
-});
-
-// Botão esquerda
-btnEsquerda.addEventListener("click", () => {
-  indice--;
-  if (indice < 0) {
-    indice = imagens.length - 1;
-  }
-  mostrarSlide();
-});
-
-// Rolagem automática
-setInterval(() => {
-  indice++;
-  if (indice >= imagens.length) {
-    indice = 0;
-  }
-  mostrarSlide();
-}, 3000);
