@@ -108,13 +108,16 @@ header {
   position: sticky;
   top: 0;
   z-index: 900;
+  /*AUMENTADO*/
+  height: 110px;
   transition: all var(--transition-suave);
 }
 
 .header-container {
+  height: 100%;
   max-width: 1400px;
   margin: 0 auto;
-  padding: 1.5rem 5%;
+  padding: 0 5%;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -122,26 +125,21 @@ header {
 }
 
 .logo img {
-  width: 250px;
-  height: auto;
+  /*destacada */
+  width: 280px;
+  height: 75px;
   object-fit: contain;
-  padding: 5px 0;
-  transition:
-    width var(--transition-suave),
-    padding var(--transition-suave);
+  transition: all var(--transition-suave);
 }
 
 header.encolhido {
+  height: 85px; /*Era 70px*/
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
 }
 
-header.encolhido .header-container {
-  padding: 0.3rem 5%;
-}
-
 header.encolhido .logo img {
-  width: 180px;
-  padding: 2px 0;
+  width: 210px;
+  height: 55px;
 }
 
 .main-nav ul {
