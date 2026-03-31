@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cursos | Prospec Edu</title>
+    <link rel="icon" type="image/png" href="img/favicon.png">
+    <link href="https://fonts.googleapis.com/css2?family=Segoe+UI:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <aside id="sidebar" class="sidebar">
+        <button id="close-btn" class="close-btn" aria-label="Fechar menu">&times;</button>
+        <div class="logo">
+            <a href="index.html">
+                <img src="img/logo-clara.png" alt="Prospec Edu" class="logo-light">
+                <img src="img/logo-prospecto-branca.png" alt="Prospec Edu" class="logo-dark">
+            </a>
+        </div>
+        <ul>
+            <li><a href="index.html#inicio"><i class="fas fa-home"></i> Início</a></li>
+            <li><a href="index.html#consultoria"><i class="fas fa-chalkboard-teacher"></i> Consultoria BNCC</a></li>
+            <li><a href="cursos.html" style="color: var(--roxo-acento);"><i class="fas fa-graduation-cap"></i> Cursos</a></li>
+            <li><a href="login.html"><i class="fas fa-sign-in-alt"></i> Entrar / Login</a></li>
+        </ul>
+    </aside>
+
+    <header>
+        <div class="header-container">
+            <div class="logo">
+                <a href="index.html">
+                    <img src="img/logo-clara.png" alt="Prospec Edu" class="logo-light">
+                    <img src="img/logo-prospecto-branca.png" alt="Prospec Edu" class="logo-dark">
+                </a>
+            </div>
+            
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="index.html#inicio">INÍCIO</a></li>
+                    <li><a href="index.html#consultoria">CONSULTORIA</a></li>
+                    <li class="active"><a href="cursos.html">CURSOS</a></li>
+                </ul>
+            </nav>
+
+            <div class="user-controls">
+                <div class="auth-buttons">
+                    <a href="login.html" class="btn-register">Login</a>
+                </div>
+                <button id="theme-toggle" class="theme-btn" aria-label="Alternar Tema">
+                    <i class="fas fa-moon"></i>
+                </button>
+                <button id="menu-btn" class="menu-btn" aria-label="Menu">
+                    <i class="fas fa-bars"></i> 
+                </button>
+            </div>
+        </div> 
+        <div class="header-border"></div> 
+    </header>
+
+    <main>
+        <section class="modules-section content-box">
+            <div style="text-align: center; margin-bottom: 2rem;">
+                <h1 class="section-title">Trilha de Aprendizado</h1>
+                <p style="color: #666; font-size: 1.1rem;">Acesse os módulos abaixo para iniciar sua formação. Conclua um módulo para desbloquear o próximo.</p>
+            </div>
+            
+            <div class="modules-grid">
+                <div class="module-card unlocked" onclick="window.open('modulo1.html', '_blank')">
+    <div class="card-icon"><i class="fas fa-unlock text-purple"></i></div>
+                    <h4>Módulo 1</h4>
+                    <h3>Introdução Básica ao Computador</h3>
+                    <p>Conceitos fundamentais de hardware e software.</p>
+                    <button class="btn btn-primary" style="width: 100%; margin-top: 10px;">Acessar Aula</button>
+                </div>
+
+                <div class="module-card locked">
+                    <div class="locked-icon"><i class="fas fa-lock"></i></div>
+                    <div class="card-icon" style="color: #999;"><i class="fas fa-laptop"></i></div>
+                    <h4>Módulo 2</h4>
+                    <h3 style="color: #999;">Sistema Operacional</h3>
+                    <p>Bloqueado</p>
+                </div>
+                
+                <div class="module-card locked">
+                    <div class="locked-icon"><i class="fas fa-lock"></i></div>
+                    <div class="card-icon" style="color: #999;"><i class="fas fa-file-word"></i></div>
+                    <h4>Módulo 3</h4>
+                    <h3 style="color: #999;">Editores de Texto</h3>
+                    <p>Bloqueado</p>
+                </div>
+
+                <div class="module-card locked">
+                    <div class="locked-icon"><i class="fas fa-lock"></i></div>
+                    <div class="card-icon" style="color: #999;"><i class="fas fa-globe"></i></div>
+                    <h4>Módulo 4</h4>
+                    <h3 style="color: #999;">Navegação Segura</h3>
+                    <p>Bloqueado</p>
+                </div>
+
+                <div class="module-card locked">
+                    <div class="locked-icon"><i class="fas fa-lock"></i></div>
+                    <div class="card-icon" style="color: #999;"><i class="fas fa-chalkboard"></i></div>
+                    <h4>Módulo 5</h4>
+                    <h3 style="color: #999;">Ferramentas Pedagógicas</h3>
+                    <p>Bloqueado</p>
+                </div>
+
+                <div class="module-card locked">
+                    <div class="locked-icon"><i class="fas fa-lock"></i></div>
+                    <div class="card-icon" style="color: #999;"><i class="fas fa-check-circle"></i></div>
+                    <h4>Módulo 6</h4>
+                    <h3 style="color: #999;">Avaliação Final</h3>
+                    <p>Bloqueado</p>
+                </div>
+            </div>
+        </section>
+    </main> 
+
+    <footer>
+        <div class="footer-top">
+            <img src="img/favicon.png" alt="Selo Prospec Edu" class="footer-logo-minimal">
+            <a href="#" class="back-to-top"><i class="fas fa-chevron-up"></i> Voltar ao topo</a>
+        </div>
+        <div class="footer-divider"></div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 Prospectiva Educacional. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+
+    <div id="modalCNH" class="modal-overlay">
+        <div class="cnh-container">
+            <span class="close-modal-btn" onclick="fecharModulo()">&times;</span>
+            
+            <div class="cnh-header">
+                <h2>CARTEIRA NACIONAL DE HABILITAÇÃO TECNOLÓGICA</h2>
+                <p>REPÚBLICA FEDERATIVA DO BRASIL - PROSPEC EDU</p>
+            </div>
+
+            <div class="cnh-body">
+                <div class="cnh-audio-section">
+                    <label><i class="fas fa-headphones"></i> Instruções em Áudio</label>
+                    <audio controls>
+                        <source src="" type="audio/mpeg">
+                        Seu navegador não suporta o elemento de áudio.
+                    </audio>
+                </div>
+
+                <div class="cnh-info-section">
+                    <div class="cnh-photo">
+                        <i class="fas fa-desktop"></i>
+                    </div>
+                    <div class="cnh-text">
+                        <div class="cnh-label">Nome do Módulo</div>
+                        <div class="cnh-value">Introdução Básica ao Computador</div>
+                        
+                        <div class="cnh-label">Descrição (Hardware x Software)</div>
+                        <div class="cnh-desc">
+                            Nesta etapa inaugural, você entenderá a estrutura de um computador. Vamos explorar a parte física (peças, cabos) e os programas que dão vida à máquina, preparando você para o uso diário em sala de aula.
+                        </div>
+                    </div>
+                </div>
+
+                <div class="cnh-video-section">
+                    <label><i class="fas fa-play-circle"></i> Aula em Vídeo</label>
+                    <div class="video-placeholder">
+                        <i class="fas fa-video fa-2x"></i>
+                        <p style="margin-top: 10px;">[ O Vídeo será inserido aqui ]</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/script.js"></script>
+</body>
+</html>

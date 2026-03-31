@@ -124,3 +124,38 @@ if (slidesContainer && imagens.length > 0) {
     
     window.addEventListener('resize', mostrarSlide);
 }
+
+
+const modalCNH = document.getElementById('modalCNH');
+
+function abrirModulo() {
+    if(modalCNH) {
+        modalCNH.classList.add('show');
+        document.body.style.overflow = 'hidden'; 
+    }
+}
+
+function fecharModulo() {
+    if(modalCNH) {
+        modalCNH.classList.remove('show');
+        
+        setTimeout(() => {
+            modalCNH.style.display = 'none';
+        
+            modalCNH.style.display = ''; 
+            document.body.style.overflow = ''; 
+        }, 300);
+    }
+}
+
+window.addEventListener('click', function(event) {
+    if (event.target === modalCNH) {
+        fecharModulo();
+    }
+});
+
+window.addEventListener('keydown', function(event) {
+    if (event.key === 'Escape' && modalCNH && modalCNH.classList.contains('show')) {
+        fecharModulo();
+    }
+});

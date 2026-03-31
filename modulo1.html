@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Módulo 1 - Prospec Edu</title>
+    <link rel="icon" type="image/png" href="img/favicon.png">
+    <link href="https://fonts.googleapis.com/css2?family=Segoe+UI:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <header>
+        <div class="header-container">
+            <div class="logo">
+                <a href="index.html">
+                    <img src="img/logo-clara.png" alt="Prospec Edu" class="logo-light">
+                    <img src="img/logo-prospecto-branca.png" alt="Prospec Edu" class="logo-dark">
+                </a>
+            </div>
+            
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="index.html#inicio">INÍCIO</a></li>
+                    <li><a href="index.html#consultoria">CONSULTORIA</a></li>
+                    <li class="active"><a href="cursos.html">CURSOS</a></li>
+                </ul>
+            </nav>
+
+            <div class="user-controls">
+                <a href="cursos.html" class="btn-register" style="border-color: #666; color: #666;">Voltar aos Cursos</a>
+                <button id="theme-toggle" class="theme-btn" aria-label="Alternar Tema">
+                    <i class="fas fa-moon"></i>
+                </button>
+            </div>
+        </div> 
+        <div class="header-border"></div> 
+    </header>
+
+    <main style="padding-top: 3rem;">
+        
+        <div class="aula-page-container">
+            
+            <div class="aula-header">
+                <h2>HABILITAÇÃO TECNOLÓGICA - MÓDULO 1</h2>
+                <p>PROSPEC EDU - FORMAÇÃO BNCC</p>
+            </div>
+
+            <div class="aula-body">
+                
+                <div class="aula-audio-section">
+                    <label><i class="fas fa-headphones text-purple"></i> Instruções em Áudio</label>
+                    <audio controls>
+                        <source src="" type="audio/mpeg">
+                        Seu navegador não suporta o elemento de áudio.
+                    </audio>
+                </div>
+
+                <div class="aula-info-section">
+                    <div class="aula-photo">
+                        <i class="fas fa-desktop"></i>
+                    </div>
+                    <div class="aula-text">
+                        <div class="aula-label">Nome do Módulo</div>
+                        <div class="aula-value">Introdução Básica ao Computador</div>
+                        
+                        <div class="aula-label">Descrição (Hardware x Software)</div>
+                        <div class="aula-desc">
+                            Nesta etapa inaugural, você entenderá a estrutura de um computador. Vamos explorar a parte física (peças, cabos) e os programas que dão vida à máquina, preparando você para o uso diário em sala de aula.
+                        </div>
+                    </div>
+                </div>
+
+                <div class="aula-video-section">
+                    <label><i class="fas fa-play-circle text-purple"></i> Aula em Vídeo</label>
+                    <div class="video-placeholder">
+                        <i class="fas fa-video fa-2x"></i>
+                        <p style="margin-top: 10px;">[ O Vídeo da aula será inserido aqui ]</p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+    </main> 
+
+    <script src="js/script.js"></script>
+</body>
+</html>
